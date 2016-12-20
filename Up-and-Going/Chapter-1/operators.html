@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8"/>
+<head>
+  <title>Chapter 1 - Operators</title>
+  <script src="js/operators.js"></script>
+</head>
+<body>
+  <h1>Operators</h1>
+  <p>Operators are how we perform actions on variables and values.</p>
+  <p>The = equals operator is used for <em>assignment</em> -- we first calculate the value on the <em>right-hand side</em> (source value) of the = and then put it into the variable that we specify on the <em>left-hand side</em> (target variable).</p>
+  <p>Consider:</p>
+  <p>a = 2;</p>
+  <p>b = a +1;</p>
+  <p>Here, we assign the 2 value to the a variable. Then, we get the value of the a variable (still 2), add 1 to it resulting in the value 3, then store that value in the b variable.</p>
+  <p>While not technically an operator, you'll need the keyword <strong>var</strong> in every program, as it's the primary way you <em>declare</em> (aka <em>create</em>) variables.</p>
+  <p>You should always declare a var by name before you use it. But you ony need to declare a var once for each scope; it can be used as many times after that as needed. For example: (result also in dev console)</p>
+  <p>var a = 20;</p>
+  <p>a = a + 1;</p>
+  <p>a = a * 2;</p>
+  <p>console.log ( a ); //42</p>
+</body>
+</html>
