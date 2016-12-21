@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8"/>
+<head>
+  <title>Chapter 1 - Variables</title>
+  <link rel="stylesheet" href="style/style.css">
+  <script src="js/variables.js"></script>
+</head>
+<body>
+  <h1>Variables</h1>
+  <dl class="definition">
+    <dt>Variable</dt>
+    <dd>A symbolic container assigned and used to hold a value -- so called because the value in this container can vary over time as needed.</dd>
+  </dl>
+  <p><em>Static typing</em>, otherwise known as <em>type enforcement</em>, is typically cited as a benefit for program correctness by preventing unintended value conversions.</p>
+  <p><em>Weak typing</em>, otherwise known as <em>dynamic typing</em>, allows a variable to hold any type of value at any time. Cited as a benefit for program flexibility. Variables can hold values of any <em>type</em> without any <em>type</em> enforcement. JS uses this type.</p>
+  <p>Consider:</p>
+  <div class="example">
+    <p>var amount = 99.99;</p>
+    <p>amount = amount * 2;</p>
+    <p>console.log( amount ); // 199.98</p>
+    <br>
+    <p>// convert 'amount' to a string, and</p>
+    <p>// add "$" on the beginning.</p>
+    <p>amount = "$" + String( amount );</p>
+    <p>console.log( amount ); //"199.98"</p>
+  </div>
+  <p>The primary purpose of variables is to manage program <em>state</em>.</p>
+  <p>In other words, <em>state</em> is tracking the changes to values as your program runs.</p>
+  <p>Another common usage is for centralizing value setting. This is more typically called <em>constants</em>, when you declare a variable with a value and intend for that value to <em>not change</em> througout the program.</p>
+  <p><em>Constants</em> are declared at the top of the program, and by convention, JS variables as constants are usually capitalized, with underscores between words.</p>
+  <p>Consider:</p>
+  <div class="example">
+    <p>var TAX_RATE = 0.08;  // 8% sales tax</p>
+    <br>
+    <p>var amount = 99.99;</p>
+    <br>
+    <p>amount = amount * 2;</p>
+    <br>
+    <p>amount = amount + (amount * TAX_RATE);</p>
+    <br>
+    <p>console.log( amount ); // 215.9784</p>
+    <p>console.log( amount.toFixed( 2 ) ); // "215.98"</p>
+  </div>
+    <p>The TAX_RATE variable is only <em>constant</em> by convention. There is nothing in the above program that prevents it from being changed.</p>
+    <p>There is a new way to declare <em>constants</em>. by using <strong>const</strong> instead of <strong>var</strong>.</p>
+    <p>Consider:</p>
+    <div class="example">
+      <p>// as of ES6 (version of JS)</p>
+      <p>const TAX_RATE = 0.08;</p>
+      <p>var amount = 99.99;</p>
+    </div>
+    <p>Assigning a value to a <strong>const</strong> prevents the value from being accidently changed later on in the program.</p>
+</body>
+</html>
