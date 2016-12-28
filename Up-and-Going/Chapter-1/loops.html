@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8"/>
+<head>
+  <title>Chapter 1 - Loops</title>
+  <link rel="stylesheet" href="style/style.css">
+  <script src="js/loops.js"></script>
+</head>
+<body>
+  <h1>Loops</h1>
+  <p>Repeating a set of actions until a certain condition fails -- in other words, repeating only while the condition holds -- is the job of programming loops; loops can take different forms, but they all satisfy this basic behavior.</p>
+  <p>A loop includes the test condition as well as a block (typically as <strong>{..}</strong>). Each time the loop block executes, that's called an <em>iteration</em>.</p>
+  <p>Consider: <strong>while</strong> and <strong>do</strong> loops</p>
+  <div class="example">
+    <p>
+      var numOfCustomers = 10;
+    </p>
+    <p>
+      while (numOfCustomers > 0) { <br>
+      console.log( "How may I help you" ); <br>
+      <br>
+      //help the customer... <br>
+      <br>
+      numOfCustomers = numOfCustomers - 1; <br>
+      }
+    </p>
+    <p>Going Foward, please see example in JS file.</p>
+  </div>
+  <p>The only practical difference between these loops is whether the conditional is tested before the first iteration <strong>(while)</strong> or after the first iteration <strong>(do..while)</strong>.</p>
+  <p>In either form, if the conditional tests as <strong>false</strong>, the next iteration will not run.  That means if the condition is initially <strong>false</strong>, a <strong>while</strong> loop will never run, but a <strong>do..while</strong> loop will run just the first time.</p>
+  <p>Sometimes you are looping for the intended purpose of counting a certain set of numbers, like from <strong>0</strong> to <strong>9</strong> (ten numbers). You can do that by setting a loop iteration variable like <strong>i</strong> at value <strong>0</strong> and incrementing it by <strong>1</strong> for each iteration.</p>
+  <p><strong>Warning:</strong>Programming languages almost always count things in a zero-based fashion, meaning starting with <strong>0</strong> instead of <strong>1</strong></p>
+  <p>The conditional is tested on each iteration, much as if there is an implied <strong>if</strong> statement inside the loop.</p>
+</body>
+</html>
