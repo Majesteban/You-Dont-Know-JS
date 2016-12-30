@@ -9,16 +9,16 @@
 <body>
   <h1>Conditionals</h1>
   <p>Conditionals are decision points in your program.</p>
-  <p>Most common is the <strong>if</strong> statement.  Essentially, you're saying, "<em>If</em> this condition is true, do the following...". For example:</p>
+  <p>Most common is the <span class="highlight">if</span> statement.  Essentially, you're saying, "<em>If</em> this condition is true, do the following...". For example:</p>
   <div class="example">
     <p>var bank_balance = 302.13;<br>
-       var amount = 99.99;</p>
+       <span class="tab"></span>var amount = 99.99;</p>
     <p>if (amount < bank_balance) {<br>
-       console.log( "I want to buy this phone!");<br>
+       <span class="tab"></span>console.log( "I want to buy this phone!");<br>
      }</p>
   </div>
-  <p>The <strong>if</strong> statement requires an expression in between the parentheses that can be treated as either <strong>true</strong> or <strong>false</strong>.</p>
-  <p>You can provide an alternative if the condition isn't true, called an <strong>else</strong> clause.</p>
+  <p>The <span class="highlight">if</span> statement requires an expression in between the parentheses that can be treated as either <span class="highlight">true</span> or <span class="highlight">false</span>.</p>
+  <p>You can provide an alternative if the condition isn't true, called an <span class="highlight">else</span> clause.</p>
   <p>Consider:</p>
   <div class="example">
     <p>const ACCESSORY_PRICE = 9.99;</p>
@@ -27,15 +27,15 @@
     <p>amount = amount * 2;</p>
     <p>// can we afford the extra purchase?<br>
        if ( amount < bank_balance ) {<br>
-         console.log( "I'll take the accessory!" );<br>
-         amount = amount + ACCESORY_PRICE; <br>
+        <span class="tab"></span> console.log( "I'll take the accessory!" );<br>
+        <span class="tab"></span> amount = amount + ACCESORY_PRICE; <br>
        } <br>
        //otherwise: <br>
        else { <br>
-         console.log( "No, thanks." ); <br>
+         <span class="tab"></span>console.log( "No, thanks." ); <br>
        }</p>
   </div>
-  <p>Values that aren't already of an expected type are often coerced to that type. The <strong>if</strong> statement expects a <strong>boolean</strong>, but if you pass it something that's not already <strong>boolean</strong>, coercion will occur.</p>
-  <p>JS defines a list of specific values that are considered "falsy" because when coerced to a <strong>boolean</strong>, they become <strong>false</strong>.  Any other value not on the "falsy" list is automatically "truthy" -- when coerced to a <strong>boolean</strong> they become <strong>true</strong>.</p>
+  <p>Values that aren't already of an expected type are often coerced to that type. The <span class="highlight">if</span> statement expects a <span class="highlight">boolean</span>, but if you pass it something that's not already <span class="highlight">boolean</span>, coercion will occur.</p>
+  <p>JS defines a list of specific values that are considered "falsy" because when coerced to a <span class="highlight">boolean</span>, they become <span class="highlight">false</span>.  Any other value not on the "falsy" list is automatically "truthy" -- when coerced to a <span class="highlight">boolean</span> they become <span class="highlight">true</span>.</p>
 </body>
 </html>

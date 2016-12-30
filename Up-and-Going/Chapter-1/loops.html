@@ -9,27 +9,51 @@
 <body>
   <h1>Loops</h1>
   <p>Repeating a set of actions until a certain condition fails -- in other words, repeating only while the condition holds -- is the job of programming loops; loops can take different forms, but they all satisfy this basic behavior.</p>
-  <p>A loop includes the test condition as well as a block (typically as <strong>{..}</strong>). Each time the loop block executes, that's called an <em>iteration</em>.</p>
-  <p>Consider: <strong>while</strong> and <strong>do</strong> loops</p>
+  <p>A loop includes the test condition as well as a block (typically as <span class="highlight">{..}</span>). Each time the loop block executes, that's called an <em>iteration</em>.</p>
+  <p>Consider: <span class="highlight">while</span> and <span class="highlight">do</span> loops</p>
+  <div class="example-group">
+    <div class="example">
+      <p>
+        var numOfCustomers = 10;
+      </p>
+      <p>
+        while (numOfCustomers > 0) { <br>
+        <span class="tab"></span>console.log( "How may I help you" ); <br>
+        <br>
+        <span class="tab"></span>//help the customer... <br>
+        <br>
+        <span class="tab"></span>numOfCustomers = numOfCustomers - 1; <br>
+        }
+      </p>
+    </div>
+    <div class="example">
+      <p>
+        do { <br>
+        <span class="tab"></span>console.log( "How may I help you?"); <br>
+        <br>
+        <span class="tab"></span>//help the customer <br>
+        <br>
+        <span class="tab"></span>numOfCustomers = numOfCustomers - 1; <br>
+      } while ( numOfCustomers > 0 );
+      </p>
+    </div>
+  </div>
+  <p>The only practical difference between these loops is whether the conditional is tested before the first iteration <span class="highlight">(while)</span> or after the first iteration <span class="highlight">(do..while)</span>.</p>
+  <p>In either form, if the conditional tests as <span class="highlight">false</span>, the next iteration will not run.  That means if the condition is initially <span class="highlight">false</span>, a <span class="highlight">while</span> loop will never run, but a <span class="highlight">do..while</span> loop will run just the first time.</p>
+  <p>Sometimes you are looping for the intended purpose of counting a certain set of numbers, like from <span class="highlight">0</span> to <span class="highlight">9</span> (ten numbers). You can do that by setting a loop iteration variable like <span class="highlight">i</span> at value <span class="highlight">0</span> and incrementing it by <span class="highlight">1</span> for each iteration.</p>
+  <p><span class="highlight">Warning:</span>Programming languages almost always count things in a zero-based fashion, meaning starting with <span class="highlight">0</span> instead of <span class="highlight">1</span></p>
+  <p>The conditional is tested on each iteration, much as if there is an implied <span class="highlight">if</span> statement inside the loop.</p>
+  <br>
+  <p>Another specialized loop is the <span class="highlight">for</span> loop. For example:</p>
   <div class="example">
     <p>
-      var numOfCustomers = 10;
+      for (var i = 0; i <=9; i = i + 1) { <br>
+      <span class="tab"></span>console.log( i ); <br>
+    }
     </p>
-    <p>
-      while (numOfCustomers > 0) { <br>
-      console.log( "How may I help you" ); <br>
-      <br>
-      //help the customer... <br>
-      <br>
-      numOfCustomers = numOfCustomers - 1; <br>
-      }
-    </p>
-    <p>Going Foward, please see example in JS file.</p>
   </div>
-  <p>The only practical difference between these loops is whether the conditional is tested before the first iteration <strong>(while)</strong> or after the first iteration <strong>(do..while)</strong>.</p>
-  <p>In either form, if the conditional tests as <strong>false</strong>, the next iteration will not run.  That means if the condition is initially <strong>false</strong>, a <strong>while</strong> loop will never run, but a <strong>do..while</strong> loop will run just the first time.</p>
-  <p>Sometimes you are looping for the intended purpose of counting a certain set of numbers, like from <strong>0</strong> to <strong>9</strong> (ten numbers). You can do that by setting a loop iteration variable like <strong>i</strong> at value <strong>0</strong> and incrementing it by <strong>1</strong> for each iteration.</p>
-  <p><strong>Warning:</strong>Programming languages almost always count things in a zero-based fashion, meaning starting with <strong>0</strong> instead of <strong>1</strong></p>
-  <p>The conditional is tested on each iteration, much as if there is an implied <strong>if</strong> statement inside the loop.</p>
+  <p>The <span class="highlight">for</span> has three clauses: the initialization clause (<span class="highlight">var i=0</span>), the conditional test clause(<span class="highlight">i <= 9</span>), and the update clause (<span class="highlight">i = i + 1</span>). So if you're going to do counting with your loop iterations, <span class="highlight">for</span> is a more compact and often easier form to understand and write.</p>
+  <br>
+  <p>The "loop until a condition fails" concept holds no matter what the form of the loop.</p>
 </body>
 </html>

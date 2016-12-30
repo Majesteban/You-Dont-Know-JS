@@ -8,26 +8,26 @@
 </head>
 <body>
   <h1>Blocks</h1>
-  <p>A grouped series of statements is called a block. In JS, a block is defined by wrapping one or more statments inside a curly-brace pair <strong>{..}</strong>.</p>
+  <p>A grouped series of statements is called a block. In JS, a block is defined by wrapping one or more statments inside a curly-brace pair <span class="highlight">{..}</span>.</p>
   <p>Consider:</p>
   <div class="example">
     <p>var amount = 99.99;</p>
     <p>// a general block</p>
     <p>{<br>
-        amount = amount *2;<br>
-        console.log( amount ); // 199.98<br>
+        <span class="tab"></span>amount = amount *2;<br>
+        <span class="tab"></span>console.log( amount ); // 199.98<br>
       }
     </p>
-    <p>Typically, blocks are attached to some other control statement, such as an <strong>if</strong> statement or a loop. For example:</p>
+  </div>
+    <p>Typically, blocks are attached to some other control statement, such as an <span class="highlight">if</span> statement or a loop. For example:</p>
     <div class="example">
       <p>var = 99.99;</p>
       <p>// is amount big enough?</p>
       <p>if (amount > 10) {  // block attached to 'if'<br>
-         amount = amount * 2;<br>
-         console.log ( amount );  // 199.98<br>
+         <span class="tab"></span>amount = amount * 2;<br>
+         <span class="tab"></span>console.log ( amount );  // 199.98<br>
        }</p>
     </div>
-    <p>The statements inside the block will  only be processed if the conditional passes.</p>
-  </div>
+    <p>The statements inside the block will  only be processed if the conditional passes.</p>  
 </body>
 </html>
