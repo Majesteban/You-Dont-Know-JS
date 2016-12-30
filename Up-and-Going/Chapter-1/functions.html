@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8"/>
+<head>
+  <title>Chapter 1 - Functions</title>
+  <link rel="stylesheet" href="style/style.css">
+  <script src="js/functions.js"></script>
+</head>
+<body>
+  <h1>Functions</h1>
+  <p>It is better to define tasks once and resuse them over and over again. Your program will want to break up the code's tasks into resusable pieces, and the way to do this is to define a <span class="highlight">function</span>.</p>
+  <p>A function is generally a name section of code that can be "called" by name, and the code inside it will be run each time.</p>
+  <p>Consider:</p>
+  <div class="example">
+    <p>function printAmount() { <br>
+    <span class="tab"></span>console.log( amount.toFixed( 2 ) ); <br>
+    }</p>
+    <p>var amount = 99.99;</p>
+    <p>printAmount(); // "99.99"</p>
+    <p>amount = amount * 2;</p>
+    <p>printAmount(); // "199.98"</p>
+  </div>
+  <p>Functions can optionally take arguments (aka parameters) -- values you pass in. And they can optionally return a value back.</p>
+  <div class="example">
+    <p>function printAmount(amt) { <br>
+    <span class="tab"></span>console.log( amt.toFixed( 2 ) ); <br>
+    }</p>
+    <p>function formatAmount() { <br>
+    <span class="tab"></span>return "$" + amount.toFixed( 2 ); <br>
+    }</p>
+    <p>var amount = 99.99;</p>
+    <p>printAmount( amount * 2 ); // "199.98"</p>
+    <p>amount = formatAmount(); <br>
+       console.log( amount ); // "$99.99"</p>
+  </div>
+  <p>The function <span class="highlight">printAmount(..)</span> takes a parameter that we call <span class="highlight">amt</span>. The function <span class="highlight">formatAmount()</span> returns a value. Of course, you can combine those two techniques in the same function.</p>
+  <p>Functions are often used for code that you plan to call mulitple times, but they can also be useful just to organizze related bits of code into named collections, even if you only plan to call them once.</p>
+  <p>Consider:</p>
+  <div class="example">
+    <p>const TAX_RATE = 0.08;</p>
+    <p>function calculateFinalPurchaseAmount(amt) { <br>
+    <span class="tab"></span>// calculate the new amount with the tax <br>
+    <span class="tab"></span>amt = amt + (amt * TAX_RATE); <br>
+    <br>
+    <span class="tab"></span>// return the new amount <br>
+    <span class="tab"></span>return amt; <br>
+    }</p>
+    <p>var amount = 99.99;</p>
+    <p>amount = calculateFinalPurchaseAmount( amount );</p>
+    <p>console.log( amount.toFixed( 2 ) ); // "107.99"</p>
+  </div>
+  <p>Although <span class="highlight">calculateFinalPurchaseAmount(..)</span> is only called once, organizing its behavior into a separate named function makes the code that uses its logic (the <span class="highlight">amount = calculateFinal...</span> statement) cleaner.</p>
+</body>
+</html>
