@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8"/>
+<head>
+  <title>Chapter 1 - Scope</title>
+  <link rel="stylesheet" href="style/style.css">
+  <script src="js/scope.js"></script>
+</head>
+<body>
+  <h1>Scope</h1>
+  <p>In JS, each function gets its own scope.  Scope is basically a collection of variables as well as the rules for how those variables are accessed by name. Only code inside that function can access that function's <em>scoped</em> variables.</p>
+  <p>A variable name has to be unique within the same scope -- there can't be two different <span class="highlight">a</span> variables sitting right next to each other. But the same variable name <span class="highlight">a</span> could appear in different scopes.</p>
+  <p>Consider:</p>
+  <div class="example">
+    <p>function one() { <br>
+    <span class="tab"></span>// this 'a' only belongs to the 'one()' function <br>
+    <span class="tab"></span>var a = 1; <br>
+    <span class="tab"></span>console.log( a ); <br>
+    }</p>
+    <br>
+    <p>function two() { <br>
+    <span class="tab"></span>// this 'a' only belongs to the 'two()' function <br>
+    <span class="tab"></span>var a = 2; <br>
+    <span class="tab"></span>console.log( a ); <br>
+    }</p>
+    <br>
+    <p>one(); // 1 <br>
+       two(); // 2</p>
+  </div>
+  <p>Also, a scope can be nested inside another scope. If one scope is nested inside another, code inside the innermost scope can access variables from either scope.</p>
+  <p>Consider:</p>
+  <div class="example">
+    <p>function outer() { <br>
+      <span class="tab"></span>var a = 1; <br>
+      <br>
+      <span class="tab"></span>function inner() { <br>
+      <span class="tab"></span><span class="tab"></span>var b = 2; <br>
+      <br>
+      <span class="tab"></span><span class="tab"></span>// we can access both 'a' and 'b' here <br>
+      <span class="tab"></span><span class="tab"></span>console.log( a + b );  // 3 <br>
+      <span class="tab"></span>} <br>
+      <br>
+      <span class="tab"></span>inner(); <br>
+      <br>
+      <span class="tab"></span>// we can only access 'a' here <br>
+      <span class="tab"></span>console.log( a );  // 1 <br>
+      }<br>
+      <br>
+      outer();
+   </p>
+  </div>
+  <p>Lexical scope rules say that code in one scope can access variables of either that scope or any scope outside of it.</p>
+  <p>So, code inside the <span class="highlight">inner()</span> function has access to both variables <span class="highlight">a</span> and <span class="highlight">b</span>, but code in <span class="highlight">outer()</span> has access only to <span class="highlight">a</span> -- it cannot access <span class="highlight">b</span> because that variable is only inside <span class="highlight">inner()</span>.</p>  
+</body>
+</html>
