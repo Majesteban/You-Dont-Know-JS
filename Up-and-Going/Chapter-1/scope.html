@@ -7,6 +7,10 @@
   <script src="js/scope.js"></script>
 </head>
 <body>
+  <nav>
+    <a href="file:///home/esteban/Documents/Code%20Practice/You-Dont-Know-JS/Up-and-Going/Chapter-1/functions.html">Previous</a>
+    <a href="file:///home/esteban/Documents/Code%20Practice/You-Dont-Know-JS/Up-and-Going/Chapter-1/scope.html">Next</a>
+  </nav>
   <h1>Scope</h1>
   <p>In JS, each function gets its own scope.  Scope is basically a collection of variables as well as the rules for how those variables are accessed by name. Only code inside that function can access that function's <em>scoped</em> variables.</p>
   <p>A variable name has to be unique within the same scope -- there can't be two different <span class="highlight">a</span> variables sitting right next to each other. But the same variable name <span class="highlight">a</span> could appear in different scopes.</p>
@@ -50,6 +54,6 @@
    </p>
   </div>
   <p>Lexical scope rules say that code in one scope can access variables of either that scope or any scope outside of it.</p>
-  <p>So, code inside the <span class="highlight">inner()</span> function has access to both variables <span class="highlight">a</span> and <span class="highlight">b</span>, but code in <span class="highlight">outer()</span> has access only to <span class="highlight">a</span> -- it cannot access <span class="highlight">b</span> because that variable is only inside <span class="highlight">inner()</span>.</p>  
+  <p>So, code inside the <span class="highlight">inner()</span> function has access to both variables <span class="highlight">a</span> and <span class="highlight">b</span>, but code in <span class="highlight">outer()</span> has access only to <span class="highlight">a</span> -- it cannot access <span class="highlight">b</span> because that variable is only inside <span class="highlight">inner()</span>.</p>
 </body>
 </html>
