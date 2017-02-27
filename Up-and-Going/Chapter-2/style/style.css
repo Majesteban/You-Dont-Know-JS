@@ -1,0 +1,84 @@
+html {
+  padding: 20px;
+  background: honeydew;
+}
+
+body {
+  background: rgba(32, 178, 170, 0.2);
+  max-width: 900px;
+  padding: 30px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 50px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid black;
+  position: relative;
+  margin-top: 0;
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+ul {
+  font-family: sans-serif;
+}
+.example {
+  display: inline-block;
+  background: grey;
+  color: white;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.example-group {
+  display: flex;
+}
+
+.example-group .example {
+  margin-right: 20px;
+}
+
+.definition {
+  background: pink;
+  padding: 40px 20px 20px;
+}
+
+.definition dt {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.definition dd {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  display: inline-block;
+  background: lightseagreen;
+  padding: 0 5px;
+  color: white;
+  border-radius: 4px;
+}
+
+.tab {
+  display: inline-block;
+  width: 20px;
+}
